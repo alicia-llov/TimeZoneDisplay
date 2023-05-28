@@ -20,13 +20,14 @@ export class ProgressBarComponent {
 
   ngOnInit(): void {
     
-    this.calculatePercentage()
+    this.timeByTimeZone(this.selectedTimeZone)
     setInterval(() => {
-        this.calculatePercentage()
-    }, 60000);
+      this.timeByTimeZone(this.selectedTimeZone)
+    }, 1000);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    this.localStorageService.setItem('selectedTimeZone', changes['selectedTimeZone'].currentValue)
     this.timeByTimeZone(changes['selectedTimeZone'].currentValue)
   }
 
@@ -43,7 +44,6 @@ export class ProgressBarComponent {
   }
 
   timeByTimeZone(timeZone: string) {
-    this.localStorageService.setItem('selectedTimeZone', timeZone)
     this.currentTimeDisplay = moment().tz(timeZone).format("HH:mm:ss")
     this.calculatePercentage()
   }

@@ -1,26 +1,45 @@
-.line-container {
-    margin: 50px 0;
-    width: 100%;
-    height: 3px;
-    background-color: #d0d0d0;
+.progress-bar__container {
     position: relative;
+    margin: 70px 0;
   }
-  .line-dot {
-    position:absolute;
-    top: -4px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: black;
-  }
-  
-  
-  .toggle-switch__container {
+  .progress-bar__badge {
+    position: absolute;
+    bottom: -4px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
+  .badge {
+    background-color: #ff4081;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+  }
+  .separation {
+    height: 15px;
+    width: 1px;
+    background-color: #ff4081;
+  }
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ff4081;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #2f2f2f;
+    font-size: 0;
+    line-height: 0;
+    float: left;
+  }
   .card__container {
       width: 95vw;
       margin: 20px 0;

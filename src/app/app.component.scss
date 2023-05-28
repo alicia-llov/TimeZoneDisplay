@@ -5,16 +5,12 @@
     justify-content: center;
     height: calc(100vh - 60px);
     padding: 20px 3%;
-
-    &:first-child {
-      
-    }
-    &:last-child {
-      
-    }
   }
 
-  .content--first-child {flex: 1;}
+  .content--first-child {
+    margin: 50px;
+    flex: 1;
+  }
   .content--last-child {flex: 2;}
 
   .container {
