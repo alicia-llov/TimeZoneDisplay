@@ -1,0 +1,22 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    padding: 20px 3%;
+
+    &:first-child {
+      
+    }
+    &:last-child {
+      
+    }
+  }
+
+  .content--first-child {flex: 1;}
+  .content--last-child {flex: 2;}
+
+  .container {
+    min-height: 100vh;
+  }
