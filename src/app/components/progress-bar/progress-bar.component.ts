@@ -23,7 +23,6 @@ export class ProgressBarComponent {
     this.calculatePercentage()
     setInterval(() => {
         this.calculatePercentage()
-        console.log('')
     }, 60000);
   }
 

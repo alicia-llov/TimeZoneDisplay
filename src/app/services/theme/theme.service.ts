@@ -14,7 +14,6 @@ export class ThemeService {
   }
 
   initTheme() {
-    console.log('CON QUE INICIALIZO??', this.getColorTheme())
     this.getColorTheme();
     this.renderer.addClass(document.body, this.colorTheme);
   }
@@ -30,7 +29,6 @@ export class ThemeService {
   }
 
   isDarkMode() {
-    console.log('COLOR THEME AL INICIALIZAR', this.colorTheme, this.colorTheme === 'dark-mode')
     return this.colorTheme === 'dark-mode';
   }
 
