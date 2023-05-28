@@ -1,0 +1,19 @@
+
+<div class="card__container">
+    <mat-card>
+        <mat-card-content>
+            <h2>{{ currentTimeDisplay }}</h2>
+            <h2>{{selectedTimeZone}}</h2>
+            <mat-progress-bar color="accent" mode="determinate" [value]="dotValue"></mat-progress-bar>
+            <div class="line-container">
+                <div class="line-dot" [ngStyle]="{'left': dotPercentage }" [style.left]="dotPercentage"></div>
+              </div>
+        </mat-card-content>
+      </mat-card>
+</div>
+
+
+
+
+
+
