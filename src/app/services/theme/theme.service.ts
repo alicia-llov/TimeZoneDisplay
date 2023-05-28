@@ -38,11 +38,10 @@ export class ThemeService {
   }
 
   private getColorTheme() {
-    if(!!this.localStorageService.getItem('theme')) {
+    if(this.localStorageService.getItem('theme')) {
       this.colorTheme = this.localStorageService.getItem('theme')
     } else {
       this.colorTheme = 'light-mode'
     }
-  
   }
 }

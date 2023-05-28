@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../services/theme/theme.service';
 import { LocalStorageService } from '../../services/localStorage/local-storage.service';
 
@@ -11,17 +11,14 @@ export class ToolbarComponent implements OnInit{
  title: string = 'Infovista'
  isDarkMode: boolean;
 
- constructor(private themeService: ThemeService,
-             private localStorageService: LocalStorageService) {}
+ constructor(private themeService: ThemeService) {}
 
  ngOnInit(): void {
-    this.themeService.initTheme();
     this.isDarkMode = this.themeService.isDarkMode();
  }
 
  toggleThemeMode():void {
-  
-  if(this.isDarkMode) {
+  if(this.themeService.isDarkMode()) {
     this.themeService.updateTheme('light-mode')
   } else {
     this.themeService.updateTheme('dark-mode')
