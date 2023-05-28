@@ -1,0 +1,12 @@
+<h1>Choose your prefered Time Zone</h1>
+<div class="select__container">
+  <mat-form-field *ngIf="timeZones">
+    <mat-label>Select a Time Zone</mat-label>
+    <mat-select [(ngModel)]="selectedValue" (ngModelChange)="emitSelection($event)">
+      <mat-option *ngFor="let timeZone of timeZones" [value]='timeZone'>
+        {{timeZone}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
